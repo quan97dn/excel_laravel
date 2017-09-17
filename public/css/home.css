@@ -1,0 +1,61 @@
+﻿
+.row > .barLogoB {
+    margin: 2%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 2px;
+    transition: all 1s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.row > .barLogoB:hover {
+    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    z-index: 1000;
+}
+
+.barLogoB:nth-child(1) {
+    background-color: #1E88E5;
+}
+
+.barLogoB:nth-child(2) {
+    background-color: #00BCD4;
+}
+
+.barLogoB:nth-child(3) {
+    background-color: #FF9800;
+}
+
+.barLogoB:nth-child(4) {
+    background-color: #EA4335;
+}
+
+.barLogoB:nth-child(5) {
+    background-color: #009688;
+}
+
+.barLogoB:nth-child(6) {
+    background-color: #00BCD4;
+}
+
+.spanGlyphicon {
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    margin: 4%;
+}
+
+.spanGlyphicon p {
+   font-size: 0.4em;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 2%;
+    font-weight: bold;
+}

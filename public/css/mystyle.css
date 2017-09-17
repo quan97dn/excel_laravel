@@ -1,0 +1,246 @@
+  div, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+
+  html, body {
+    height: 100%;
+    font-family: sans-serif;
+  }
+
+  .row.content {
+    height: 100%;
+  }
+    
+  /* Set gray background color and 100% height */
+  .sidenav {
+    background: #5A8DB6 url('../img/background.png') 0 0 repeat;
+    height: 120vh;
+    padding: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 3px 0px 16px rgba(0, 0, 0, 0.24);
+  }
+  
+  .sidenav > .logo {
+    background: #525252 url('../img/background.png') 0 0 repeat;
+    background-color: #333333; */
+    text-align: center;
+    font-family: cursive;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  }
+
+  .sidenav span {
+     margin-right: 10px;
+     vertical-align: middle;
+  }
+
+  .menu li {
+    margin-bottom: 5%;
+  }
+
+  .menu li a {
+    color: #fff;
+  }
+
+  .menu li a:hover {
+    background-color: #428bca;
+  }
+
+  /* set nav content */
+  .content .nav-profile {
+      background: #5A8DB6 url('../img/background.png') 0 0 repeat;
+      padding-left: 40%;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+  }
+  .content .dropdown-profile {
+      padding: 2.8%;
+  }
+
+  .content .cldrop {
+      cursor: pointer;
+  }
+
+  .content .yicontent {
+      margin: 0;
+      padding: 0;
+  }
+
+  .content .dropdown-profile i {
+      cursor: pointer;
+  }
+
+  .content > .row-right {
+    padding: 0;
+  }
+
+  .disabled {
+      pointer-events: none;
+      opacity: 0.4;
+  }
+  
+  /* nav-bar */
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+  .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      margin-top: 20px;
+  }
+
+  /* Flip around the padding for proper display in narrow viewports */
+  .navbar-wrapper .container {
+      padding-left: 0;
+      padding-right: 0;
+  }
+  .navbar-wrapper .navbar {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
+  .navbar-content
+  {
+      width:320px;
+      padding: 15px;
+      padding-bottom:0px;
+  }
+  .navbar-content:before, .navbar-content:after
+  {
+      display: table;
+      content: "";
+      line-height: 0;
+  }
+
+  .changephoto {
+      padding: 10%;
+  }
+
+  .navbar-nav.navbar-right:last-child {
+      margin-right: 15px !important;
+  }
+  .navbar-footer 
+  {
+      background-color:#DDD;
+  }
+  .navbar-footer-content { padding:15px 15px 15px 15px; }
+  .dropdown-menu {
+      padding: 0px;
+      overflow: hidden;
+  }
+
+  /* custume css table bootstrap */
+  .panel-table .panel-body{
+    padding:0;
+  }
+
+  .panel-table .panel-body .table-bordered{
+    border-style: none;
+    margin:0;
+  }
+
+  .panel-table .panel-body .table-bordered > thead > tr > th:first-of-type {
+      text-align:center;
+      width: 100px;
+  }
+
+  .panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
+  .panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type {
+      border-right: 0px;
+  }
+
+  .panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
+  .panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type {
+      border-left: 0px;
+  }
+
+  .panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td{
+      border-bottom: 0px;
+  }
+
+  .panel-table .panel-body .table-bordered > thead > tr:first-of-type > th{
+      border-top: 0px;
+  }
+
+  .panel-table .panel-footer .pagination{
+      margin:0; 
+  }
+
+  /*
+  used to vertically center elements, may need modification if you're not using default sizes.
+  */
+  .panel-table .panel-footer .col{
+   line-height: 34px;
+   height: 34px;
+  }
+
+  .panel-table .panel-heading .col h3{
+   line-height: 30px;
+   height: 30px;
+  }
+
+  .panel-table .panel-body .table-bordered > tbody > tr > td{
+    line-height: 34px;
+  }
+
+
+
+  /* Set black background color, white text and some padding */
+  footer {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0px -3px 16px rgba(0, 0, 0, 0.24);
+    background: #2e4c60 url('../img/background.png') 0 0 repeat;
+    color: white;
+    padding: 12px;
+  }
+    
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height: auto;} 
+  }
