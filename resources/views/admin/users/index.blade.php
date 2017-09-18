@@ -9,11 +9,28 @@
         <div class="panel-heading">
           <div class="row">
             <div class="col col-xs-6">
-              <h3 class="panel-title">LIST USER</h3>
+              <h3 class="panel-title">
+                <i class="fa fa-list fa-2x" aria-hidden="true"></i>
+              </h3>
             </div>
             <div class="col col-xs-6 text-right">
-               {{ Html::link('/admin/users/create', null, array('class' => 'btn btn-sm btn-primary btn-create')) }}
+              {{ Html::link('/admin/users/create', null, array('class' => 'btn btn-sm btn-primary btn-create')) }}
               {{ Html::link('#', null, array('class' => 'btn btn-sm btn-danger btn-delete-all')) }}
+              <div class="btn-group">
+                <a class="btn btn-primary" href="#"><i class="fa fa-file-excel-o" aria-hidden="true"></i></a>
+                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                  <span class="fa fa-caret-down" title="Toggle dropdown menu"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="fa fa-upload" aria-hidden="true"></i></li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="{{ url('/admin/users/ExportTableUser') }}">
+                      <i class="fa fa-download" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

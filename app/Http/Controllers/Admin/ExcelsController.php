@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Excel;
+use Session;
 use PHPExcel_Worksheet_Drawing;
 use App\User;
 
@@ -194,7 +195,7 @@ class ExcelsController extends Controller
 		    	
 		    	$d = 0; // vali $d++ in for (-).
 
-		    	$lableRs = ['Công thường', 'Công phép', 'Tổng công', 'Cơm trưa', 'Ghi chú']; // lable col result .
+		    	$lableRs  = ['Công thường', 'Công phép', 'Tổng công', 'Cơm trưa', 'Ghi chú']; // lable col result .
 
 		    	// For col Max (getYearDateN) -> col Max (Result) (-) .
 		    	for($i = ($this->getYearDateN(date('m'), date('Y')) + 6); $i < ($this->getYearDateN(date('m'), date('Y')) + 11); $i++) {
@@ -222,6 +223,37 @@ class ExcelsController extends Controller
 			    	$d++;
 			    }
 
+
+			    // Sum (Rs - (CT/CP/TC/CTR/Gtr))
+			     
+			    
+			    for($y = 13; $y < (13 + count($user)); $y++) { // (|)
+
+		    		for($i = 6; $i < ($this->getYearDateN(date('m'), date('Y')) + 6); $i++) { // (-)
+
+		    			$d = 0;
+
+		    			for($ir = ($this->getYearDateN(date('m'), date('Y')) + 6); $ir < ($this->getYearDateN(date('m'), date('Y')) + 10); $ir++) {// (-)
+
+		    				if($d == 0) 
+			    			$sheet->setCellValue($this->columnCain($ir).$y, '=SUM(F'.$y.':'.$this->columnCain($i).''.$y.')+COUNTIF(F'.$y.':'.$this->columnCain($i).''.$y.',"P/2")/2');	
+
+			    			if($d == 1)
+			    			$sheet->setCellValue($this->columnCain($ir).$y, '=COUNTIF(F'.$y.':'.$this->columnCain($i).''.$y.',"P")+COUNTIF(F'.$y.':'.$this->columnCain($i).''.$y.',"P/2")/2');
+
+			    			if($d == 2)
+			    			$sheet->setCellValue($this->columnCain($ir).$y, '=SUM('.$this->columnCain(($this->getYearDateN(date('m'), date('Y')) + 6)).$y.':'.$this->columnCain(($this->getYearDateN(date('m'), date('Y')) + 7)).''.$y.')');
+
+			    			if($d == 3)
+			    			$sheet->setCellValue($this->columnCain($ir).$y, '=COUNTIF(F'.$y.':'.$this->columnCain($i).''.$y.', 1)');
+			    			$d++;
+
+		    			}
+
+		    		}		
+
+		    	}
+			    
 			    // ====================================== Col (Rs - (NL/QL/HC)) =================================================== //
 			    
 			    // Cells lable Col Footer .
@@ -241,6 +273,9 @@ class ExcelsController extends Controller
 					});
 
 			    }
+
+			    // set value col -> (NL)
+			    $sheet->setCellValue($lableValiable[0].(15 + count($user)), '+ '.Session::get('profile')->f_name.' '.Session::get('profile')->l_name);
 			    
 			});
 

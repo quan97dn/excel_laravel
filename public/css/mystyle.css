@@ -226,7 +226,11 @@
     line-height: 34px;
   }
 
+  /* edit editer dropdown */
 
+  ul.dropdown-menu {
+    min-width: 50px;
+  }
 
   /* Set black background color, white text and some padding */
   footer {

@@ -9,7 +9,9 @@
           <div class="panel-heading">
             <div class="row">
               <div class="col col-xs-6">
-                <h3 class="panel-title">CREATE USER</h3>
+                <h3 class="panel-title">
+                  <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                </h3>
               </div>
               <div class="col col-xs-6 text-right">
                 {{ Html::link('#', null, array('class' => 'btn btn-sm btn-info btn-save')) }}
